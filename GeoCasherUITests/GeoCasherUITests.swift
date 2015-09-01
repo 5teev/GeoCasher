@@ -5,6 +5,8 @@
 //  Created by Steve Milano on 8/28/15.
 //  Copyright © 2015 Steve Milano. All rights reserved.
 //
+//  This is out of scope.
+//
 
 import XCTest
 
