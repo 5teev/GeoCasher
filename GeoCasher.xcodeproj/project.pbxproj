@@ -1,0 +1,653 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		934F2DEB0873EE332EBFC748 /* Pods_GeoCasher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E913B09EF112BA4694BDF0FF /* Pods_GeoCasher.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		AF127F7D1B9517FD008AB592 /* MasterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF127F7C1B9517FD008AB592 /* MasterViewModel.swift */; settings = {ASSET_TAGS = (); }; };
+		AF127F7E1B9517FD008AB592 /* MasterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF127F7C1B9517FD008AB592 /* MasterViewModel.swift */; settings = {ASSET_TAGS = (); }; };
+		AF127F7F1B9517FD008AB592 /* MasterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF127F7C1B9517FD008AB592 /* MasterViewModel.swift */; settings = {ASSET_TAGS = (); }; };
+		AF8798AA1B8FDD2400D6ED44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8798A91B8FDD2400D6ED44 /* AppDelegate.swift */; };
+		AF8798AC1B8FDD2400D6ED44 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8798AB1B8FDD2400D6ED44 /* MasterViewController.swift */; };
+		AF8798AE1B8FDD2400D6ED44 /* MapDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8798AD1B8FDD2400D6ED44 /* MapDetailViewController.swift */; };
+		AF8798B11B8FDD2400D6ED44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF8798AF1B8FDD2400D6ED44 /* Main.storyboard */; };
+		AF8798B31B8FDD2400D6ED44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF8798B21B8FDD2400D6ED44 /* Assets.xcassets */; };
+		AF8798B61B8FDD2400D6ED44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF8798B41B8FDD2400D6ED44 /* LaunchScreen.storyboard */; };
+		AF8798C11B8FDD2400D6ED44 /* GeoCasherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8798C01B8FDD2400D6ED44 /* GeoCasherTests.swift */; };
+		AF8798CC1B8FDD2400D6ED44 /* GeoCasherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8798CB1B8FDD2400D6ED44 /* GeoCasherUITests.swift */; };
+		AF8821081B91123000EE7A99 /* PhotoLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8821071B91123000EE7A99 /* PhotoLocation.swift */; settings = {ASSET_TAGS = (); }; };
+		AF8821091B91123000EE7A99 /* PhotoLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8821071B91123000EE7A99 /* PhotoLocation.swift */; settings = {ASSET_TAGS = (); }; };
+		AF88210A1B91123000EE7A99 /* PhotoLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8821071B91123000EE7A99 /* PhotoLocation.swift */; settings = {ASSET_TAGS = (); }; };
+		AF88210C1B91141100EE7A99 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF88210B1B91141100EE7A99 /* CoreLocation.framework */; };
+		AF88210E1B911F9800EE7A99 /* PhotoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF88210D1B911F9800EE7A99 /* PhotoImage.swift */; settings = {ASSET_TAGS = (); }; };
+		AF88210F1B911F9800EE7A99 /* PhotoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF88210D1B911F9800EE7A99 /* PhotoImage.swift */; settings = {ASSET_TAGS = (); }; };
+		AF8821101B911F9800EE7A99 /* PhotoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF88210D1B911F9800EE7A99 /* PhotoImage.swift */; settings = {ASSET_TAGS = (); }; };
+		AF8821121B912B0D00EE7A99 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8821111B912B0D00EE7A99 /* PhotoModel.swift */; settings = {ASSET_TAGS = (); }; };
+		AF8821131B912B0D00EE7A99 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8821111B912B0D00EE7A99 /* PhotoModel.swift */; settings = {ASSET_TAGS = (); }; };
+		AF8821141B912B0D00EE7A99 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8821111B912B0D00EE7A99 /* PhotoModel.swift */; settings = {ASSET_TAGS = (); }; };
+		AF8821161B94275800EE7A99 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8821151B94275800EE7A99 /* PhotoCell.swift */; settings = {ASSET_TAGS = (); }; };
+		AF8821171B94275800EE7A99 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8821151B94275800EE7A99 /* PhotoCell.swift */; settings = {ASSET_TAGS = (); }; };
+		AF8821181B94275800EE7A99 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8821151B94275800EE7A99 /* PhotoCell.swift */; settings = {ASSET_TAGS = (); }; };
+		AFA221721B955E79000978BA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFA221711B955E79000978BA /* MapKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AF8798BD1B8FDD2400D6ED44 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF87989E1B8FDD2400D6ED44 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF8798A51B8FDD2400D6ED44;
+			remoteInfo = GeoCasher;
+		};
+		AF8798C81B8FDD2400D6ED44 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF87989E1B8FDD2400D6ED44 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF8798A51B8FDD2400D6ED44;
+			remoteInfo = GeoCasher;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		427D096324F009F1BA5A31EA /* Pods-GeoCasher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoCasher.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeoCasher/Pods-GeoCasher.release.xcconfig"; sourceTree = "<group>"; };
+		88E75A512B3A570A3CBFCA83 /* Pods-GeoCasher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoCasher.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeoCasher/Pods-GeoCasher.debug.xcconfig"; sourceTree = "<group>"; };
+		AF127F7C1B9517FD008AB592 /* MasterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewModel.swift; sourceTree = "<group>"; };
+		AF8798A61B8FDD2400D6ED44 /* GeoCasher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoCasher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF8798A91B8FDD2400D6ED44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AF8798AB1B8FDD2400D6ED44 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		AF8798AD1B8FDD2400D6ED44 /* MapDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailViewController.swift; sourceTree = "<group>"; };
+		AF8798B01B8FDD2400D6ED44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AF8798B21B8FDD2400D6ED44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF8798B51B8FDD2400D6ED44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AF8798B71B8FDD2400D6ED44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF8798BC1B8FDD2400D6ED44 /* GeoCasherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoCasherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF8798C01B8FDD2400D6ED44 /* GeoCasherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoCasherTests.swift; sourceTree = "<group>"; };
+		AF8798C21B8FDD2400D6ED44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF8798C71B8FDD2400D6ED44 /* GeoCasherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoCasherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF8798CB1B8FDD2400D6ED44 /* GeoCasherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoCasherUITests.swift; sourceTree = "<group>"; };
+		AF8798CD1B8FDD2400D6ED44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF8821071B91123000EE7A99 /* PhotoLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoLocation.swift; sourceTree = "<group>"; };
+		AF88210B1B91141100EE7A99 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AF88210D1B911F9800EE7A99 /* PhotoImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoImage.swift; sourceTree = "<group>"; };
+		AF8821111B912B0D00EE7A99 /* PhotoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
+		AF8821151B94275800EE7A99 /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		AFA221711B955E79000978BA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E913B09EF112BA4694BDF0FF /* Pods_GeoCasher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeoCasher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF8798A31B8FDD2400D6ED44 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF88210C1B91141100EE7A99 /* CoreLocation.framework in Frameworks */,
+				AFA221721B955E79000978BA /* MapKit.framework in Frameworks */,
+				934F2DEB0873EE332EBFC748 /* Pods_GeoCasher.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF8798B91B8FDD2400D6ED44 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF8798C41B8FDD2400D6ED44 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		525BD77B7E311CF466775540 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AFA221711B955E79000978BA /* MapKit.framework */,
+				AF88210B1B91141100EE7A99 /* CoreLocation.framework */,
+				E913B09EF112BA4694BDF0FF /* Pods_GeoCasher.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF127F7B1B94E0EB008AB592 /* PhotoModel */ = {
+			isa = PBXGroup;
+			children = (
+				AF8821111B912B0D00EE7A99 /* PhotoModel.swift */,
+				AF8821071B91123000EE7A99 /* PhotoLocation.swift */,
+				AF88210D1B911F9800EE7A99 /* PhotoImage.swift */,
+			);
+			name = PhotoModel;
+			sourceTree = "<group>";
+		};
+		AF87989D1B8FDD2400D6ED44 = {
+			isa = PBXGroup;
+			children = (
+				AF8798A81B8FDD2400D6ED44 /* GeoCasher */,
+				AF8798BF1B8FDD2400D6ED44 /* GeoCasherTests */,
+				AF8798CA1B8FDD2400D6ED44 /* GeoCasherUITests */,
+				AF8798A71B8FDD2400D6ED44 /* Products */,
+				C44370FE0847E62DD4C3543B /* Pods */,
+				525BD77B7E311CF466775540 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AF8798A71B8FDD2400D6ED44 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF8798A61B8FDD2400D6ED44 /* GeoCasher.app */,
+				AF8798BC1B8FDD2400D6ED44 /* GeoCasherTests.xctest */,
+				AF8798C71B8FDD2400D6ED44 /* GeoCasherUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF8798A81B8FDD2400D6ED44 /* GeoCasher */ = {
+			isa = PBXGroup;
+			children = (
+				AF8798A91B8FDD2400D6ED44 /* AppDelegate.swift */,
+				AF8798AB1B8FDD2400D6ED44 /* MasterViewController.swift */,
+				AF127F7C1B9517FD008AB592 /* MasterViewModel.swift */,
+				AF8821151B94275800EE7A99 /* PhotoCell.swift */,
+				AF127F7B1B94E0EB008AB592 /* PhotoModel */,
+				AF8798AD1B8FDD2400D6ED44 /* MapDetailViewController.swift */,
+				AF8798AF1B8FDD2400D6ED44 /* Main.storyboard */,
+				AF8798B21B8FDD2400D6ED44 /* Assets.xcassets */,
+				AF8798B41B8FDD2400D6ED44 /* LaunchScreen.storyboard */,
+				AF8798B71B8FDD2400D6ED44 /* Info.plist */,
+			);
+			path = GeoCasher;
+			sourceTree = "<group>";
+		};
+		AF8798BF1B8FDD2400D6ED44 /* GeoCasherTests */ = {
+			isa = PBXGroup;
+			children = (
+				AF8798C01B8FDD2400D6ED44 /* GeoCasherTests.swift */,
+				AF8798C21B8FDD2400D6ED44 /* Info.plist */,
+			);
+			path = GeoCasherTests;
+			sourceTree = "<group>";
+		};
+		AF8798CA1B8FDD2400D6ED44 /* GeoCasherUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AF8798CB1B8FDD2400D6ED44 /* GeoCasherUITests.swift */,
+				AF8798CD1B8FDD2400D6ED44 /* Info.plist */,
+			);
+			path = GeoCasherUITests;
+			sourceTree = "<group>";
+		};
+		C44370FE0847E62DD4C3543B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				88E75A512B3A570A3CBFCA83 /* Pods-GeoCasher.debug.xcconfig */,
+				427D096324F009F1BA5A31EA /* Pods-GeoCasher.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF8798A51B8FDD2400D6ED44 /* GeoCasher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF8798D01B8FDD2400D6ED44 /* Build configuration list for PBXNativeTarget "GeoCasher" */;
+			buildPhases = (
+				0FA54BAFD685C836F1CC4C8C /* Check Pods Manifest.lock */,
+				AF8798A21B8FDD2400D6ED44 /* Sources */,
+				AF8798A31B8FDD2400D6ED44 /* Frameworks */,
+				AF8798A41B8FDD2400D6ED44 /* Resources */,
+				DD2B5B8CB716A79F103254DE /* Embed Pods Frameworks */,
+				2BCBD084CD1AAA320B357C57 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GeoCasher;
+			productName = GeoCasher;
+			productReference = AF8798A61B8FDD2400D6ED44 /* GeoCasher.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AF8798BB1B8FDD2400D6ED44 /* GeoCasherTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF8798D31B8FDD2400D6ED44 /* Build configuration list for PBXNativeTarget "GeoCasherTests" */;
+			buildPhases = (
+				AF8798B81B8FDD2400D6ED44 /* Sources */,
+				AF8798B91B8FDD2400D6ED44 /* Frameworks */,
+				AF8798BA1B8FDD2400D6ED44 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF8798BE1B8FDD2400D6ED44 /* PBXTargetDependency */,
+			);
+			name = GeoCasherTests;
+			productName = GeoCasherTests;
+			productReference = AF8798BC1B8FDD2400D6ED44 /* GeoCasherTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AF8798C61B8FDD2400D6ED44 /* GeoCasherUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF8798D61B8FDD2400D6ED44 /* Build configuration list for PBXNativeTarget "GeoCasherUITests" */;
+			buildPhases = (
+				AF8798C31B8FDD2400D6ED44 /* Sources */,
+				AF8798C41B8FDD2400D6ED44 /* Frameworks */,
+				AF8798C51B8FDD2400D6ED44 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF8798C91B8FDD2400D6ED44 /* PBXTargetDependency */,
+			);
+			name = GeoCasherUITests;
+			productName = GeoCasherUITests;
+			productReference = AF8798C71B8FDD2400D6ED44 /* GeoCasherUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF87989E1B8FDD2400D6ED44 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Steve Milano";
+				TargetAttributes = {
+					AF8798A51B8FDD2400D6ED44 = {
+						CreatedOnToolsVersion = 7.0;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					AF8798BB1B8FDD2400D6ED44 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = AF8798A51B8FDD2400D6ED44;
+					};
+					AF8798C61B8FDD2400D6ED44 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = AF8798A51B8FDD2400D6ED44;
+					};
+				};
+			};
+			buildConfigurationList = AF8798A11B8FDD2400D6ED44 /* Build configuration list for PBXProject "GeoCasher" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AF87989D1B8FDD2400D6ED44;
+			productRefGroup = AF8798A71B8FDD2400D6ED44 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF8798A51B8FDD2400D6ED44 /* GeoCasher */,
+				AF8798BB1B8FDD2400D6ED44 /* GeoCasherTests */,
+				AF8798C61B8FDD2400D6ED44 /* GeoCasherUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF8798A41B8FDD2400D6ED44 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF8798B61B8FDD2400D6ED44 /* LaunchScreen.storyboard in Resources */,
+				AF8798B31B8FDD2400D6ED44 /* Assets.xcassets in Resources */,
+				AF8798B11B8FDD2400D6ED44 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF8798BA1B8FDD2400D6ED44 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF8798C51B8FDD2400D6ED44 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0FA54BAFD685C836F1CC4C8C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2BCBD084CD1AAA320B357C57 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeoCasher/Pods-GeoCasher-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD2B5B8CB716A79F103254DE /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeoCasher/Pods-GeoCasher-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF8798A21B8FDD2400D6ED44 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF127F7D1B9517FD008AB592 /* MasterViewModel.swift in Sources */,
+				AF8798AE1B8FDD2400D6ED44 /* MapDetailViewController.swift in Sources */,
+				AF8821081B91123000EE7A99 /* PhotoLocation.swift in Sources */,
+				AF8798AC1B8FDD2400D6ED44 /* MasterViewController.swift in Sources */,
+				AF88210E1B911F9800EE7A99 /* PhotoImage.swift in Sources */,
+				AF8798AA1B8FDD2400D6ED44 /* AppDelegate.swift in Sources */,
+				AF8821121B912B0D00EE7A99 /* PhotoModel.swift in Sources */,
+				AF8821161B94275800EE7A99 /* PhotoCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF8798B81B8FDD2400D6ED44 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF8798C11B8FDD2400D6ED44 /* GeoCasherTests.swift in Sources */,
+				AF8821131B912B0D00EE7A99 /* PhotoModel.swift in Sources */,
+				AF88210F1B911F9800EE7A99 /* PhotoImage.swift in Sources */,
+				AF8821091B91123000EE7A99 /* PhotoLocation.swift in Sources */,
+				AF127F7E1B9517FD008AB592 /* MasterViewModel.swift in Sources */,
+				AF8821171B94275800EE7A99 /* PhotoCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF8798C31B8FDD2400D6ED44 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF8798CC1B8FDD2400D6ED44 /* GeoCasherUITests.swift in Sources */,
+				AF8821141B912B0D00EE7A99 /* PhotoModel.swift in Sources */,
+				AF8821101B911F9800EE7A99 /* PhotoImage.swift in Sources */,
+				AF88210A1B91123000EE7A99 /* PhotoLocation.swift in Sources */,
+				AF127F7F1B9517FD008AB592 /* MasterViewModel.swift in Sources */,
+				AF8821181B94275800EE7A99 /* PhotoCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF8798BE1B8FDD2400D6ED44 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF8798A51B8FDD2400D6ED44 /* GeoCasher */;
+			targetProxy = AF8798BD1B8FDD2400D6ED44 /* PBXContainerItemProxy */;
+		};
+		AF8798C91B8FDD2400D6ED44 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF8798A51B8FDD2400D6ED44 /* GeoCasher */;
+			targetProxy = AF8798C81B8FDD2400D6ED44 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AF8798AF1B8FDD2400D6ED44 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF8798B01B8FDD2400D6ED44 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AF8798B41B8FDD2400D6ED44 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF8798B51B8FDD2400D6ED44 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AF8798CE1B8FDD2400D6ED44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AF8798CF1B8FDD2400D6ED44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AF8798D11B8FDD2400D6ED44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88E75A512B3A570A3CBFCA83 /* Pods-GeoCasher.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = GeoCasher/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sedify.GeoCasher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AF8798D21B8FDD2400D6ED44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 427D096324F009F1BA5A31EA /* Pods-GeoCasher.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = GeoCasher/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sedify.GeoCasher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AF8798D41B8FDD2400D6ED44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GeoCasherTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sedify.GeoCasherTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeoCasher.app/GeoCasher";
+			};
+			name = Debug;
+		};
+		AF8798D51B8FDD2400D6ED44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GeoCasherTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sedify.GeoCasherTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeoCasher.app/GeoCasher";
+			};
+			name = Release;
+		};
+		AF8798D71B8FDD2400D6ED44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GeoCasherUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sedify.GeoCasherUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GeoCasher;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		AF8798D81B8FDD2400D6ED44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GeoCasherUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sedify.GeoCasherUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GeoCasher;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF8798A11B8FDD2400D6ED44 /* Build configuration list for PBXProject "GeoCasher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF8798CE1B8FDD2400D6ED44 /* Debug */,
+				AF8798CF1B8FDD2400D6ED44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF8798D01B8FDD2400D6ED44 /* Build configuration list for PBXNativeTarget "GeoCasher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF8798D11B8FDD2400D6ED44 /* Debug */,
+				AF8798D21B8FDD2400D6ED44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF8798D31B8FDD2400D6ED44 /* Build configuration list for PBXNativeTarget "GeoCasherTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF8798D41B8FDD2400D6ED44 /* Debug */,
+				AF8798D51B8FDD2400D6ED44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF8798D61B8FDD2400D6ED44 /* Build configuration list for PBXNativeTarget "GeoCasherUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF8798D71B8FDD2400D6ED44 /* Debug */,
+				AF8798D81B8FDD2400D6ED44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AF87989E1B8FDD2400D6ED44 /* Project object */;
+}
