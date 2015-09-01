@@ -19,7 +19,9 @@ server.register(require('inert'), function (err) {
         method: 'GET',
         path: '/imagefeed.json',
         handler: function (request, reply) {
-            sleep.sleep(3);
+        // comment out next two lines for immediate server response
+            var responseDelayInSeconds = 3
+            sleep.sleep(responseDelayInSeconds);
             reply.file('./imagefeed.json');
         }
     });
