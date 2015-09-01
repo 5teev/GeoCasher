@@ -27,18 +27,10 @@ class PhotoCell: UICollectionViewCell {
 
     override func prepareForReuse() {
         imageView.image = UIImage(named: "placeholder")
-        label.text = ""
+        label.text = "" // could also use "Unknown Location"
         super.prepareForReuse()
     }
 }
-
-extension Alamofire.Request {
-}
-
-@objc public protocol ResponseObjectSerializable {
-    init?(response: NSHTTPURLResponse, representation: AnyObject)
-}
-
 
 extension UIImageView {
     public func imageFromUrl(url: NSURL) {

@@ -45,7 +45,7 @@ struct PhotoLocation {
         }
     }
 
-    func description() -> String {
-        return "location \(name) (id: \(id)) at \(location?.coordinate)"
+    func description() {
+        print( "location \(name) (id: \(id)) at \(location?.coordinate)" )
     }
 }

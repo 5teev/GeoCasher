@@ -31,6 +31,6 @@ struct PhotoImage {
     }
     
     func description() {
-        print("URL \(URL) ( \(width) x \(height) )")
+        print( "URL \(URL) ( \(width) x \(height) )" )
     }
 }

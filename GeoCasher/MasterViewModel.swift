@@ -14,10 +14,14 @@ struct MasterViewModel {
 
     // follow SwiftyJSON convention in initializer
     init(withArray array: [JSON] ) {
+
         for item in array {
+
             if let photoModelDict = item.dictionary {
+
                 let photoModel : PhotoModel = PhotoModel(withDictionary: photoModelDict)
                 self.photoModels.append(photoModel)
+
             }
             
         }
@@ -28,13 +32,15 @@ struct MasterViewModel {
     }
 
     func photoModelForIndexPath(indexPath : NSIndexPath) -> PhotoModel? {
+
         let index = indexPath.row
         if ( index < photoModels.count ) {
             return photoModels[index]
         }
         return nil
     }
-    
+
+    // MARK: Sorts of sorts
     mutating func sortByDistanceFromLocation( location currentLocation : CLLocation  ) {
         
         photoModels = photoModels.sort {
@@ -55,8 +61,11 @@ struct MasterViewModel {
         
         photoModels = photoModels.sort {
             (modelOne, modelTwo) -> Bool in
+
+            // compare times since epoch started
             let time1 : NSTimeInterval = (modelOne.photoCreationTime?.timeIntervalSince1970)!
             let time2 : NSTimeInterval = (modelTwo.photoCreationTime?.timeIntervalSince1970)!
+
             // most recent first
             return time1 > time2
         }

@@ -12,11 +12,13 @@ import SwiftyJSON
 import CoreLocation
 
 class MasterViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, CLLocationManagerDelegate {
+
     let dataURLString : String = "http://127.0.0.1:8000/imagefeed.json"
+
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     @IBOutlet var collectionView: UICollectionView!
 
-    // empty view model to start
+    // empty view model to start the MVVM party
     var viewModel : MasterViewModel = MasterViewModel(withArray: [])
 
     var locationManager : CLLocationManager = CLLocationManager()
