@@ -32,7 +32,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="satellite" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dyc-WQ-BUb">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="satellite" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dyc-WQ-BUb">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <connections>
                                     <outlet property="delegate" destination="JEX-9P-axG" id="92t-5B-8NH"/>
@@ -40,6 +40,12 @@
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dyc-WQ-BUb" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="-20" id="51n-Sv-3rJ"/>
+                            <constraint firstItem="dyc-WQ-BUb" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" id="b2q-Lp-t76"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dyc-WQ-BUb" secondAttribute="trailing" constant="-20" id="kd7-Mo-bHY"/>
+                            <constraint firstItem="GAO-Cl-Wes" firstAttribute="top" secondItem="dyc-WQ-BUb" secondAttribute="bottom" id="xmP-Id-Sdj"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Map" id="mOI-FS-AaM">

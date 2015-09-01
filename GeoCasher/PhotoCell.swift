@@ -13,16 +13,14 @@ class PhotoCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var label: UILabel!
 
-    var photoModel : PhotoModel?
+    var photoModel: PhotoModel? {
+        didSet {
 
-    func setPhotoModel (model: PhotoModel ) {
-        self.photoModel = model
-        
-        let name = self.photoModel!.photoLocation!.name
-        label?.text = name
-        let url = self.photoModel!.photoImageStandard!.URL
-        imageView.imageFromUrl(url!)
-
+            let name = self.photoModel!.photoLocation!.name
+            label?.text = name
+            let url = self.photoModel!.photoImageStandard!.URL
+            imageView.imageFromUrl(url!)
+        }
     }
 
     override func prepareForReuse() {

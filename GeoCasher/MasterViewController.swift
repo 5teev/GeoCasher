@@ -124,7 +124,7 @@ class MasterViewController: UIViewController, UICollectionViewDataSource, UIColl
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PhotoCell", forIndexPath: indexPath) as! PhotoCell
 
         if let photoModel = viewModel.photoModelForIndexPath(indexPath) {
-            cell.setPhotoModel(photoModel)
+            cell.photoModel = photoModel
         }
         
         return cell
