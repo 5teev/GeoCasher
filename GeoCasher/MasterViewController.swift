@@ -13,6 +13,7 @@ import CoreLocation
 
 class MasterViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, CLLocationManagerDelegate {
 
+//    let dataURLString : String = "https://raw.githubusercontent.com/5teev/GeoCasher/master/GeoCasherServer/imagefeed.json"
     let dataURLString : String = "http://127.0.0.1:8000/imagefeed.json"
     private var myContext = 0
     
@@ -87,15 +88,47 @@ class MasterViewController: UIViewController, UICollectionViewDataSource, UIColl
 
     override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
         if context == &myContext {
-            if let newValue = change?[NSKeyValueChangeNewKey] {
-                print("value changed: \(newValue)")
-                handleViewModelUpdate()
+            if let theKeyPath = keyPath {
+
+                // handle
+                switch (theKeyPath ) {
+
+                    // if "isLoading" is the keyPath, see if it's false (i.e., viewmodel has stopped loading)
+                    case "isLoading":
+                        if let isLoading = change?[NSKeyValueChangeNewKey] {
+                            if ( isLoading as! NSNumber == false ) {
+                                handleViewModelUpdate()
+                            }
+                        }
+
+                    // if "error" is the keyPath, try to discern the error, or handle a generic error
+                    case "error":
+                        // use (what should be) the error received
+                        if let errorObject = change?[NSKeyValueChangeNewKey] as! NSError? {
+                            handleViewModelError(errorObject)
+                        } else {
+                            // create generic error to use
+                            let error : NSError = getGenericError()
+                            handleViewModelError(error)
+                        }
+
+                    // if it's not "isLoading" or "error" there's nothing else we want to handle
+                    default:
+                        break
+                }
             }
         } else {
             super.observeValueForKeyPath(keyPath, ofObject: object, change: change, context: context)
         }
     }
-    
+
+    func getGenericError() -> NSError {
+        // 1<<31 should be highest possible error code--should safe to use...?
+        let error : NSError = NSError.init(domain: "", code: 1 << 31, userInfo: [NSLocalizedDescriptionKey : "Unknown error occurred."])
+        return error
+    }
+
+    // This view controller will never go away while the app is running, but nonetheless, try to use good form....
     deinit {
         self.viewModel.removeObserver(self, forKeyPath: "isLoading", context: &myContext)
         self.viewModel.removeObserver(self, forKeyPath: "error", context: &myContext)
