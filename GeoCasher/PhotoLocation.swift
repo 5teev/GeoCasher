@@ -24,7 +24,7 @@ struct PhotoLocation {
                 so that it always returns 0 as the distance between this and some random location.
                 (At least in the simulator.)
             */
-            location = CLLocation(latitude: longitude, longitude: latitude)
+            location = CLLocation(latitude: latitude, longitude: longitude)
 
             /*
                 Instead create CLLocation with fake altitude, accuracy, speed, and timestamp
