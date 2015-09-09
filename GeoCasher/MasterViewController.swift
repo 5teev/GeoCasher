@@ -14,7 +14,8 @@ import CoreLocation
 class MasterViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, CLLocationManagerDelegate {
 
     let dataURLString : String = "http://127.0.0.1:8000/imagefeed.json"
-
+    private var myContext = 0
+    
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     @IBOutlet var collectionView: UICollectionView!
 
@@ -46,41 +47,9 @@ class MasterViewController: UIViewController, UICollectionViewDataSource, UIColl
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
 
-        // try to load data
-        Alamofire.request( .GET, dataURLString ).responseJSON { _, _, result in
-
-            switch result {
-                case .Success(let data):
-                    let json = JSON(data)
-
-                    // if we have new data, re-initialize the view model
-                    if let photoModelsArray = json.array {
-                        self.viewModel = MasterViewModel(withArray: photoModelsArray)
-                    }
-
-                    // update the view
-                    self.activityIndicator.stopAnimating()
-                    self.latestLocation = nil
-                    self.collectionView?.reloadData()
-                    
-                case .Failure(_, let error):
-                    // minimal error message
-                    var errorMessage = "There was a problem loading data."
-
-                    // give better error message if possible
-                    if let errorObject = error as NSError? {
-                        errorMessage.appendContentsOf("\n\"\(errorObject.localizedDescription)\"")
-                    }
-
-                    // build and show alertView with error message
-                    let alertController = UIAlertController.init(title: "Can't Load Data", message: errorMessage, preferredStyle: .Alert)
-                    alertController.addAction(UIAlertAction(title: "OK",
-                        style: .Default, handler: nil))
-
-                    self.presentViewController(alertController, animated: false, completion: nil)
-            }
-        }
-
+        self.viewModel = MasterViewModel(withURL: dataURLString)
+        self.viewModel.addObserver(self, forKeyPath: "isLoading", options: .New, context: &myContext)
+        self.viewModel.addObserver(self, forKeyPath: "error", options: .New, context: &myContext)
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -88,6 +57,48 @@ class MasterViewController: UIViewController, UICollectionViewDataSource, UIColl
 
         // no nav bar
         self.navigationController?.navigationBarHidden = true
+    }
+
+    func handleViewModelUpdate() {
+        // update the view
+        self.activityIndicator.stopAnimating()
+        self.latestLocation = nil
+        self.collectionView?.reloadData()
+        
+    }
+    
+    func handleViewModelError(error : NSError ) {
+            // minimal error message
+            var errorMessage = "There was a problem loading data."
+            
+            // give better error message if possible
+            if let errorObject = error as NSError? {
+                errorMessage.appendContentsOf("\n\"\(errorObject.localizedDescription)\"")
+            }
+        
+            // build and show alertView with error message
+            let alertController = UIAlertController.init(title: "Can't Load Data", message: errorMessage, preferredStyle: .Alert)
+            alertController.addAction(UIAlertAction(title: "OK",
+                style: .Default, handler: nil))
+            
+            self.presentViewController(alertController, animated: false, completion: nil)
+
+    }
+
+    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+        if context == &myContext {
+            if let newValue = change?[NSKeyValueChangeNewKey] {
+                print("value changed: \(newValue)")
+                handleViewModelUpdate()
+            }
+        } else {
+            super.observeValueForKeyPath(keyPath, ofObject: object, change: change, context: context)
+        }
+    }
+    
+    deinit {
+        self.viewModel.removeObserver(self, forKeyPath: "isLoading", context: &myContext)
+        self.viewModel.removeObserver(self, forKeyPath: "error", context: &myContext)
     }
 
     override func didReceiveMemoryWarning() {

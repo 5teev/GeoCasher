@@ -8,25 +8,55 @@
 
 import SwiftyJSON
 import CoreLocation
+import Alamofire
+import SwiftyJSON
 
-struct MasterViewModel {
+class MasterViewModel : NSObject {
     var photoModels = [PhotoModel]()
+
+    // KVO vars for view controller
+    dynamic var isLoading : Bool = true
+    dynamic var error : NSError?
 
     // follow SwiftyJSON convention in initializer
     init(withArray array: [JSON] ) {
+        super.init()
+        self.setPhotoModelsWithArray(array)
+    }
 
-        for item in array {
-
-            if let photoModelDict = item.dictionary {
-
-                let photoModel : PhotoModel = PhotoModel(withDictionary: photoModelDict)
-                self.photoModels.append(photoModel)
-
-            }
+    init(withURL dataURLString: String) {
+        super.init()
+        
+        // try to load data from API call at URL
+        Alamofire.request(.GET, dataURLString ).responseJSON { _, _, result in
             
+            switch result {
+            case .Success(let data):
+                let json = JSON(data)
+
+                // process data
+                if let photoModelsArray = json.array {
+                    self.setPhotoModelsWithArray(photoModelsArray)
+                }
+                self.isLoading = false
+                
+            case .Failure(_, let error):
+                if let errorObject = error as NSError? {
+                    self.error = errorObject
+                }
+            }
         }
     }
 
+    func setPhotoModelsWithArray(array : [JSON] ) {
+        for item in array {
+            if let photoModelDict = item.dictionary {
+                let photoModel : PhotoModel = PhotoModel(withDictionary: photoModelDict)
+                self.photoModels.append(photoModel)
+            }
+        }
+    }
+    
     func count() -> Int  {
         return photoModels.count
     }
@@ -41,7 +71,7 @@ struct MasterViewModel {
     }
 
     // MARK: Sorts of sorts
-    mutating func sortByDistanceFromLocation( location currentLocation : CLLocation  ) {
+    func sortByDistanceFromLocation( location currentLocation : CLLocation  ) {
         
         photoModels = photoModels.sort {
             (modelOne, modelTwo) -> Bool in
@@ -57,7 +87,7 @@ struct MasterViewModel {
         
     }
     
-    mutating func sortByTime() {
+    func sortByTime() {
         
         photoModels = photoModels.sort {
             (modelOne, modelTwo) -> Bool in
