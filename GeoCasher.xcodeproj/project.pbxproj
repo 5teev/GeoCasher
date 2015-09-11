@@ -8,31 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		934F2DEB0873EE332EBFC748 /* Pods_GeoCasher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E913B09EF112BA4694BDF0FF /* Pods_GeoCasher.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		AF127F7D1B9517FD008AB592 /* MasterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF127F7C1B9517FD008AB592 /* MasterViewModel.swift */; settings = {ASSET_TAGS = (); }; };
-		AF127F7E1B9517FD008AB592 /* MasterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF127F7C1B9517FD008AB592 /* MasterViewModel.swift */; settings = {ASSET_TAGS = (); }; };
-		AF127F7F1B9517FD008AB592 /* MasterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF127F7C1B9517FD008AB592 /* MasterViewModel.swift */; settings = {ASSET_TAGS = (); }; };
+		AF127F7D1B9517FD008AB592 /* MasterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF127F7C1B9517FD008AB592 /* MasterViewModel.swift */; };
+		AF127F7E1B9517FD008AB592 /* MasterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF127F7C1B9517FD008AB592 /* MasterViewModel.swift */; };
+		AF127F7F1B9517FD008AB592 /* MasterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF127F7C1B9517FD008AB592 /* MasterViewModel.swift */; };
 		AF8798AA1B8FDD2400D6ED44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8798A91B8FDD2400D6ED44 /* AppDelegate.swift */; };
 		AF8798AC1B8FDD2400D6ED44 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8798AB1B8FDD2400D6ED44 /* MasterViewController.swift */; };
 		AF8798AE1B8FDD2400D6ED44 /* MapDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8798AD1B8FDD2400D6ED44 /* MapDetailViewController.swift */; };
 		AF8798B11B8FDD2400D6ED44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF8798AF1B8FDD2400D6ED44 /* Main.storyboard */; };
 		AF8798B31B8FDD2400D6ED44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF8798B21B8FDD2400D6ED44 /* Assets.xcassets */; };
-		AF8798B61B8FDD2400D6ED44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF8798B41B8FDD2400D6ED44 /* LaunchScreen.storyboard */; };
 		AF8798C11B8FDD2400D6ED44 /* GeoCasherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8798C01B8FDD2400D6ED44 /* GeoCasherTests.swift */; };
 		AF8798CC1B8FDD2400D6ED44 /* GeoCasherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8798CB1B8FDD2400D6ED44 /* GeoCasherUITests.swift */; };
-		AF8821081B91123000EE7A99 /* PhotoLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8821071B91123000EE7A99 /* PhotoLocation.swift */; settings = {ASSET_TAGS = (); }; };
-		AF8821091B91123000EE7A99 /* PhotoLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8821071B91123000EE7A99 /* PhotoLocation.swift */; settings = {ASSET_TAGS = (); }; };
-		AF88210A1B91123000EE7A99 /* PhotoLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8821071B91123000EE7A99 /* PhotoLocation.swift */; settings = {ASSET_TAGS = (); }; };
+		AF8821081B91123000EE7A99 /* PhotoLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8821071B91123000EE7A99 /* PhotoLocation.swift */; };
+		AF8821091B91123000EE7A99 /* PhotoLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8821071B91123000EE7A99 /* PhotoLocation.swift */; };
+		AF88210A1B91123000EE7A99 /* PhotoLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8821071B91123000EE7A99 /* PhotoLocation.swift */; };
 		AF88210C1B91141100EE7A99 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF88210B1B91141100EE7A99 /* CoreLocation.framework */; };
-		AF88210E1B911F9800EE7A99 /* PhotoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF88210D1B911F9800EE7A99 /* PhotoImage.swift */; settings = {ASSET_TAGS = (); }; };
-		AF88210F1B911F9800EE7A99 /* PhotoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF88210D1B911F9800EE7A99 /* PhotoImage.swift */; settings = {ASSET_TAGS = (); }; };
-		AF8821101B911F9800EE7A99 /* PhotoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF88210D1B911F9800EE7A99 /* PhotoImage.swift */; settings = {ASSET_TAGS = (); }; };
-		AF8821121B912B0D00EE7A99 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8821111B912B0D00EE7A99 /* PhotoModel.swift */; settings = {ASSET_TAGS = (); }; };
-		AF8821131B912B0D00EE7A99 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8821111B912B0D00EE7A99 /* PhotoModel.swift */; settings = {ASSET_TAGS = (); }; };
-		AF8821141B912B0D00EE7A99 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8821111B912B0D00EE7A99 /* PhotoModel.swift */; settings = {ASSET_TAGS = (); }; };
-		AF8821161B94275800EE7A99 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8821151B94275800EE7A99 /* PhotoCell.swift */; settings = {ASSET_TAGS = (); }; };
-		AF8821171B94275800EE7A99 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8821151B94275800EE7A99 /* PhotoCell.swift */; settings = {ASSET_TAGS = (); }; };
-		AF8821181B94275800EE7A99 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8821151B94275800EE7A99 /* PhotoCell.swift */; settings = {ASSET_TAGS = (); }; };
+		AF88210E1B911F9800EE7A99 /* PhotoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF88210D1B911F9800EE7A99 /* PhotoImage.swift */; };
+		AF88210F1B911F9800EE7A99 /* PhotoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF88210D1B911F9800EE7A99 /* PhotoImage.swift */; };
+		AF8821101B911F9800EE7A99 /* PhotoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF88210D1B911F9800EE7A99 /* PhotoImage.swift */; };
+		AF8821121B912B0D00EE7A99 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8821111B912B0D00EE7A99 /* PhotoModel.swift */; };
+		AF8821131B912B0D00EE7A99 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8821111B912B0D00EE7A99 /* PhotoModel.swift */; };
+		AF8821141B912B0D00EE7A99 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8821111B912B0D00EE7A99 /* PhotoModel.swift */; };
+		AF8821161B94275800EE7A99 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8821151B94275800EE7A99 /* PhotoCell.swift */; };
+		AF8821171B94275800EE7A99 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8821151B94275800EE7A99 /* PhotoCell.swift */; };
+		AF8821181B94275800EE7A99 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8821151B94275800EE7A99 /* PhotoCell.swift */; };
 		AFA221721B955E79000978BA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFA221711B955E79000978BA /* MapKit.framework */; };
+		AFC9E9C71BA2C0E0002290D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFC9E9C61BA2C0E0002290D2 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +62,6 @@
 		AF8798AD1B8FDD2400D6ED44 /* MapDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailViewController.swift; sourceTree = "<group>"; };
 		AF8798B01B8FDD2400D6ED44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF8798B21B8FDD2400D6ED44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AF8798B51B8FDD2400D6ED44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF8798B71B8FDD2400D6ED44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF8798BC1B8FDD2400D6ED44 /* GeoCasherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoCasherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF8798C01B8FDD2400D6ED44 /* GeoCasherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoCasherTests.swift; sourceTree = "<group>"; };
@@ -76,6 +75,7 @@
 		AF8821111B912B0D00EE7A99 /* PhotoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
 		AF8821151B94275800EE7A99 /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		AFA221711B955E79000978BA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		AFC9E9C61BA2C0E0002290D2 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E913B09EF112BA4694BDF0FF /* Pods_GeoCasher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeoCasher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -160,7 +160,7 @@
 				AF8798AD1B8FDD2400D6ED44 /* MapDetailViewController.swift */,
 				AF8798AF1B8FDD2400D6ED44 /* Main.storyboard */,
 				AF8798B21B8FDD2400D6ED44 /* Assets.xcassets */,
-				AF8798B41B8FDD2400D6ED44 /* LaunchScreen.storyboard */,
+				AFC9E9C61BA2C0E0002290D2 /* LaunchScreen.storyboard */,
 				AF8798B71B8FDD2400D6ED44 /* Info.plist */,
 			);
 			path = GeoCasher;
@@ -304,7 +304,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF8798B61B8FDD2400D6ED44 /* LaunchScreen.storyboard in Resources */,
+				AFC9E9C71BA2C0E0002290D2 /* LaunchScreen.storyboard in Resources */,
 				AF8798B31B8FDD2400D6ED44 /* Assets.xcassets in Resources */,
 				AF8798B11B8FDD2400D6ED44 /* Main.storyboard in Resources */,
 			);
@@ -438,14 +438,6 @@
 				AF8798B01B8FDD2400D6ED44 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		AF8798B41B8FDD2400D6ED44 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AF8798B51B8FDD2400D6ED44 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
