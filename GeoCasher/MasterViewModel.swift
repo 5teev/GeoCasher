@@ -31,20 +31,20 @@ class MasterViewModel : NSObject {
         Alamofire.request(.GET, dataURLString ).responseJSON { _, _, result in
             
             switch result {
-            case .Success(let data):
-                let json = JSON(data)
+                case .Success(let data):
+                    let json = JSON(data)
 
-                // process data
-                if let photoModelsArray = json.array {
-                    self.setPhotoModelsWithArray(photoModelsArray)
+                    // process data
+                    if let photoModelsArray = json.array {
+                        self.setPhotoModelsWithArray(photoModelsArray)
+                    }
+                    self.isLoading = false
+                    
+                case .Failure(_, let error):
+                    if let errorObject = error as NSError? {
+                        self.error = errorObject
+                    }
                 }
-                self.isLoading = false
-                
-            case .Failure(_, let error):
-                if let errorObject = error as NSError? {
-                    self.error = errorObject
-                }
-            }
         }
     }
 
